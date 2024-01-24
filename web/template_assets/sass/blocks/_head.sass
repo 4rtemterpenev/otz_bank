@@ -1,0 +1,55 @@
+.head
+  height: 65px
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  z-index: 100
+  &-block
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    height: 100%
+    &__phone
+      display: flex
+      flex-direction: row
+      align-items: center
+    &__number
+      font-size: 16px
+      line-height: 24px
+      color: #162136
+      font-family: "Inter", sans-serif
+      font-weight: 400
+    &__icon
+      margin-right: 10px
+    &__logo
+      width: 260px
+      img
+        width: 100%
+.wraper
+  width: 1200px
+  margin: 0 auto
+
+
+
+@media(max-width: 1200px)
+  .wraper
+    width: 90%
+@media(max-width: 650px)
+  .head
+    &-block
+      &__logo
+        width: 150px
+        display: flex
+        align-items: center
+        img
+          width: 100%
+        div
+          width: 100%
+@media(max-width: 330px)
+  .head
+    &-block
+      &__logo
+        width: 108px
+        height: 19px

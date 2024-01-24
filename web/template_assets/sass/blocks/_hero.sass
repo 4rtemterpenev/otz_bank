@@ -1,0 +1,275 @@
+.hero
+  &-wrap
+    background-color: #F1F1F3
+    height: 528px
+    z-index: 0
+  &-block
+    display: flex
+    flex-direction: row
+    position: relative
+    justify-content: space-between
+    align-items: center
+    height: 100%
+    &__text
+      display: block
+      flex-direction: column
+      margin-top: -50px
+      width: 50%
+      &.mobile
+        display: none
+        border: 1px solid #D6D9E0
+        box-shadow: 0px 4px 8px 0px #00000014
+        background-color: #fff
+        border-radius: 16px
+        padding: 16px
+        position: relative
+        z-index: 10
+      &.preland
+        width: 60%
+      &.dislike
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    &__content
+      display: flex
+      flex-direction: row
+      align-items: center
+    &__heading
+      font-family: "Inter", sans-serif
+      font-weight: 700
+      font-size: 60px
+      line-height: 68px
+      color: #162136
+    &__content
+      font-family: "Inter", sans-serif
+      font-weight: 600
+      font-size: 18px
+      line-height: 28px
+      color: #162136
+      display: flex
+      flex-direction: row
+      align-items: center
+      padding: 10px 16px 10px 16px
+      border-radius: 40px
+      background-color: #fff
+      width: max-content
+      margin-top: 14px
+    &__icon
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-right: 15px
+    &__image
+      height: 100%
+      position: absolute
+      bottom: 0
+      right: -100px
+      display: flex
+      justify-content: flex-end
+      align-items: flex-end
+      z-index: 1
+      &.preland
+        bottom: 60px
+        right: 0
+    &__btns
+      display: flex
+      flex-direction: row
+      margin-top: 30px
+    &__btn
+      padding: 16px 24px 16px 24px
+      border-radius: 8px
+      background-color: #009846
+      display: flex
+      flex-direction: row
+      align-items: center
+      margin-right: 15px
+      &.red
+        background-color: #EB5757
+      span
+        font-family: "Inter", sans-serif
+        font-weight: 500
+        font-size: 16px
+        line-height: 24px
+        color: #fff
+        margin-right: 10px
+    &__name
+      font-family: 'Inter', sans-serif
+      font-weight: 700
+      font-size: 32px
+      line-height: 40px
+      color: #162136
+      width: 760px
+      text-align: center
+      margin-bottom: 20px
+    &__sub
+      font-family: 'Inter', sans-serif
+      font-weight: 400
+      font-size: 14px
+      line-height: 20px
+      color: #162136
+      width: 500px
+      text-align: center
+    &__card
+      border: 1px solid #D6D9E0
+      box-shadow: 0px 4px 8px 0px #00000014
+      width: 100%
+      margin: 32px auto
+      border-radius: 16px
+      display: none
+      background-color: #fff
+
+.wraper
+  height: 100%
+
+@media(max-width: 1200px)
+  .hero
+    &-block
+      width: 100%
+      &__image
+        width: 50%
+        right: 0
+        img
+          width: 100%
+        &.preland
+          right: 0
+
+@media(max-width: 1000px)
+  .hero
+    &-wrap
+      height: 400px
+      &.dis
+        height: 500px
+    &-block
+      &__heading
+        font-size: 30px
+        line-height: 36px
+      &__image
+        width: 55%
+        &.preland
+          bottom: 0
+      &__text
+        width: 40%
+      &__content
+        width: 100%
+        font-size: 14px
+        line-height: 20px
+
+@media(max-width: 900px)
+  .hero
+    &-wrap
+      &.preland
+        height: 550px
+    &-block
+      &__btns
+        display: flex
+        flex-direction: column
+      &__text
+        &.preland
+          display: none
+        &.opened
+          display: flex
+          width: 100%
+      &__btn
+        width: 210px
+        margin-bottom: 10px
+      &__image
+        &.preland
+          width: 70%
+          right: 100px
+          bottom: 50px
+          img
+            width: 100%
+      &__name
+        width: 100%
+      &__sub
+        width: 100%
+      &__name
+        width: 100%
+      &__sub
+        width: 100%
+@media(max-width: 700px)
+  .hero
+    &-wrap
+      &.dis
+        height: 100%
+        background-color: #fff
+      &.preland
+        height: 450px
+    &-block
+      flex-direction: column
+      &__text
+        display: none
+        &.mobile
+          display: flex
+          width: 100%
+          margin-top: -60px
+        &.dislike
+          display: none
+      &__image
+        width: 90%
+      &__heading
+        font-size: 40px
+        line-height: 48px
+      &__content
+        padding-left: 0
+        font-size: 16px
+        line-height: 24px
+      &__card
+        display: flex
+        flex-direction: column
+        padding: 16px
+        justify-content: flex-start
+        align-items: flex-start
+        margin: 16px auto 16px auto
+      &__name
+        text-align: start
+        margin-bottom: 10px
+      &__sub
+        text-align: start
+  .wraper.dis
+    width: 100%
+    height: 100%
+@media(max-width: 600px)
+  .hero
+    &-wrap
+      height: 300px
+      &.preland
+        height: 500px
+    &-block
+      &__image
+        width: 100%
+        &.preland
+          width: 100%
+          bottom: 50px
+          right: 0
+          img
+            width: 100%
+      &__btn
+        width: 100%
+        justify-content: center
+        align-items: center
+@media(max-width: 430px)
+  .hero
+    &-wrap
+      height: 243px
+      &.preland
+        height: 380px
+    &-block
+      &__image
+        margin-top: 0
+
+@media(max-width: 350px)
+  .hero
+    &-wrap
+      height: 220px
+      &.preland
+        height: 300px
+    &-block
+      &__heading
+        font-size: 32px
+        line-height: 40px
+      &__content
+        font-size: 14px
+        line-height: 22px
